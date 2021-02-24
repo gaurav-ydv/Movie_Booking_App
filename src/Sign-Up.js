@@ -86,14 +86,17 @@ return(
 
       <form>
 
-        <label>Email</label><br/>
+       <div> <label>Email</label><br/>
         <input 
         type="text"  
         value = {enteredemail} 
         onChange = {emailChange} 
         placeholder="Enter Your Email Here"/>
         <br/>
+        </div>
      
+        <div>
+          <div>
         <label>Password</label><br/>
         <input 
         type={passwordShown ? "text" : "password"} 
@@ -104,6 +107,8 @@ return(
         class="i1">{eye}</i>
         <br/>
     
+        </div>
+          <div>
         <label>Confirm Password</label><br/>
         <input 
         type={cpasswordShown ? "text" : "password"} 
@@ -113,6 +118,8 @@ return(
         <i onClick={togglecPasswordVisiblity} 
         class="i2">{eye}</i>
         <br/>
+        </div>
+        </div>
 
         <div>
         <span style={{  
