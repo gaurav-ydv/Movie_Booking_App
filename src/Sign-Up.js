@@ -8,13 +8,14 @@ const eye = <FontAwesomeIcon icon={faEye} />;
 
 
 const Sign_Up = () =>{
-    const [enteredemail,setenteredemail] = useState('');                                      //state for email
+    const [enteredemail,setenteredemail] = useState('');                                       //state for email
+    const [enteredName,setenteredName] = useState('');                                        //state for Full Name
     const [enteredpassword,setenteredpassword] = useState('');                               // state for password
     const [enteredconfirmpassword,setenteredconfirmpassword] = useState('');                // state for confirm password
     const [passwordShown, setPasswordShown] = useState('');                                // state for hide/show password
     const [cpasswordShown, setcPasswordShown] = useState('');                             // state for hide/show confirmpassword
     const [emailError, setEmailError] = useState('');                                    // state for email validation
-    const [pswdError, setpswdError] = useState(false);                                     // sate for password validation
+    const [pswdError, setpswdError] = useState(false);                                  // sate for password validation
     const [passwordError, setpasswordError] = useState('');                            // sate for password = confirm password
 
     
@@ -31,6 +32,7 @@ const Sign_Up = () =>{
         event.preventDefault();
           const newuser = {
                   id : Math.random.toString(),
+                  name     : enteredName,
                   email    : enteredemail,
                   password : enteredpassword };
          
@@ -53,6 +55,9 @@ const Sign_Up = () =>{
                    else {
                     setEmailError('')
                    }
+                };
+    const NameChange = event =>{
+         setenteredName(event.target.value);
                 };
   
     const passwordChange = event =>{
@@ -85,6 +90,14 @@ return(
      <h2>
 
       <form>
+      <div> <label>Full Name</label><br/>
+        <input 
+        type="text"  
+        value = {enteredName} 
+        onChange = {NameChange} 
+        placeholder="Enter Your Email Here"/>
+        <br/>
+        </div>
 
        <div> <label>Email</label><br/>
         <input 
