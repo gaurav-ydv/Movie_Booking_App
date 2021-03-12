@@ -95,7 +95,7 @@ return(
         type="text"  
         value = {enteredName} 
         onChange = {NameChange} 
-        placeholder="Enter Your Email Here"/>
+        placeholder="Enter Your Full Name Here"/>
         <br/>
         </div>
 
