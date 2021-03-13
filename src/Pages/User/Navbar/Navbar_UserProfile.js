@@ -11,8 +11,10 @@ const Navbar_UserProfile = () => {
         </NavLink>
         <Bars/>
         <NavMenu>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/">Now Showing</NavLink>
+        <NavLink to="/">Coming Soon</NavLink>
         <NavLink to="/">Previous Purchases</NavLink>
-        <NavLink to="/">Book Tickets</NavLink>
         </NavMenu>
         <NavBtn>
         <NavBtnLink to="/">Log Out</NavBtnLink>

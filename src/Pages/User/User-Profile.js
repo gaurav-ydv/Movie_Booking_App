@@ -25,6 +25,9 @@ const User_Profile = () => {
                         <div>
                         <FileUpload/>
                         </div>
+                        <div>
+                        <Router><NavBtnLink to="/">Update</NavBtnLink></Router>
+                        </div>
                     </td>
                     <td>
                         <div>
